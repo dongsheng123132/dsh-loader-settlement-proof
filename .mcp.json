@@ -1,0 +1,1 @@
+{"mcpServers":{"dsh-loader-settlement-proof":{"command":"node","args":["${pluginDir}/mcp-server.mjs"]}}}

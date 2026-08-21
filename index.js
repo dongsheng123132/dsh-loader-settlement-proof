@@ -1,0 +1,8 @@
+import { inspectSettlement, verifySettlement } from './lib/loader-settlement-proof.mjs'
+
+export const name = 'dsh-loader-settlement-proof'
+export const inject = ['tools']
+const render = (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]
+function tool(name, description, parameters, execute) { const required = Object.keys(parameters); return { name, description, parameters: { type: 'object', properties: Object.fromEntries(required.map(key => [key, { type: 'string' }])), required, additionalProperties: false }, output: { schema: {}, render }, execute(args = {}) { if (!args || typeof args !== 'object' || Array.isArray(args)) throw new TypeError('arguments must be an object'); for (const key of Object.keys(args)) if (!parameters[key]) throw new TypeError(`unknown argument: ${key}`); for (const key of required) if (typeof args[key] !== 'string' || !args[key]) throw new TypeError(`${key} is required`); return execute(args) } } }
+export function createDefinitions(_ctx, config = {}) { const base = args => ({ workspaceRoot: config.workspaceRoot ?? process.cwd(), ...args }); return [tool('dsh_loader_settlement_inspect', 'Inspect one revision-bound, body-free DSH Loader settlement receipt.', { settlementPath: true }, args => inspectSettlement(base(args))), tool('dsh_loader_settlement_verify', 'Verify Loader phase order, activation, injections and tool schema receipts; write one content-addressed report.', { settlementPath: true, artifactDir: true }, args => verifySettlement(base(args)))] }
+export function apply(ctx, config = {}) { for (const definition of createDefinitions(ctx, config)) ctx.tools.register(definition) }

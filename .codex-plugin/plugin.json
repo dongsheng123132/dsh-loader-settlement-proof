@@ -1,0 +1,16 @@
+{
+  "name": "dsh-loader-settlement-proof",
+  "version": "0.1.0",
+  "description": "Content-addressed evidence for recorded DSH Loader settlement",
+  "author": { "name": "hfshfg" },
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DSH Loader Settlement Proof",
+    "shortDescription": "Verify recorded Loader activation receipts.",
+    "longDescription": "Verifies revision-bound, body-free Loader receipts for declaration, resolution, loading, activation, injection satisfaction and registered tool schemas without starting, reloading or toggling plugins.",
+    "developerName": "hfshfg",
+    "category": "Developer Tools",
+    "capabilities": ["Loader settlement evidence", "Injection closure", "Tool schema receipts"],
+    "defaultPrompt": ["Verify this recorded DSH Loader settlement receipt."]
+  }
+}

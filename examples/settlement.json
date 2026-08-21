@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "profileId": "web-smoke",
+    "dshRevisionSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "loaderContractVersion": "app-boot-v1"
+  },
+  "policy": {
+    "expectedDshRevisionSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "requiredEntryIds": ["proof-tools"],
+    "requiredTools": [{ "name": "receipt_verify", "schemaSha256": "2222222222222222222222222222222222222222222222222222222222222222" }],
+    "requireAllEnabledActivated": true
+  },
+  "entries": [{
+    "entryId": "proof-tools",
+    "moduleName": "example-proof-tools",
+    "enabled": true,
+    "injectRequested": ["tools"],
+    "injectResolved": ["tools"],
+    "events": [
+      { "phase": "declared", "seq": 1, "evidenceSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" },
+      { "phase": "resolved", "seq": 2, "evidenceSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" },
+      { "phase": "loaded", "seq": 3, "evidenceSha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" },
+      { "phase": "activated", "seq": 4, "evidenceSha256": "1111111111111111111111111111111111111111111111111111111111111111" }
+    ],
+    "terminal": { "status": "activated", "failureClass": "none", "evidenceSha256": "3333333333333333333333333333333333333333333333333333333333333333" },
+    "tools": [{ "name": "receipt_verify", "schemaSha256": "2222222222222222222222222222222222222222222222222222222222222222", "evidenceSha256": "4444444444444444444444444444444444444444444444444444444444444444" }]
+  }]
+}
