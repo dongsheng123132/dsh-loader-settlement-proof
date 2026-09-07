@@ -1,14 +1,45 @@
 {
   "name": "dsh-loader-settlement-proof",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Content-addressed evidence for recorded DSH Loader settlement",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
-  "exports": { ".": "./index.js", "./proof": "./lib/loader-settlement-proof.mjs" },
-  "bin": { "dsh-loader-settlement-proof": "./bin/dsh-loader-settlement-proof.mjs" },
-  "files": [".codex-plugin/", ".mcp.json", "bin/", "cordis.patch.yml", "examples/settlement.json", "index.js", "lib/", "mcp-server.mjs", "LICENSE", "README.md", "README.zh-CN.md", "SECURITY.md"],
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "exports": {
+    ".": "./index.js",
+    "./proof": "./lib/loader-settlement-proof.mjs"
+  },
+  "bin": {
+    "dsh-loader-settlement-proof": "./bin/dsh-loader-settlement-proof.mjs"
+  },
+  "files": [
+    ".codex-plugin/",
+    ".mcp.json",
+    "bin/",
+    "cordis.patch.yml",
+    "examples/settlement.json",
+    "index.js",
+    "lib/",
+    "mcp-server.mjs",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "SECURITY.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.1.2-alpha.4",
+      "node": ">=22",
+      "dshReleases": {
+        "0.1.2-alpha.4": "compatible",
+        "0.1.2-alpha.5": "compatible",
+        "0.1.2-rc.1": "compatible"
+      }
+    }
+  },
   "scripts": {
     "test": "node --test test/*.test.mjs",
     "check": "node scripts/check.mjs",
@@ -17,7 +48,19 @@
     "smoke:dsh": "node test/dsh-runtime-smoke.mjs",
     "smoke:stock-web": "node test/stock-web-loader-smoke.mjs"
   },
-  "engines": { "node": ">=22" },
-  "repository": { "type": "git", "url": "git+https://github.com/dongsheng123132/dsh-loader-settlement-proof.git" },
-  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "loader", "activation", "evidence"]
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongsheng123132/dsh-loader-settlement-proof.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "loader",
+    "activation",
+    "evidence"
+  ]
 }
