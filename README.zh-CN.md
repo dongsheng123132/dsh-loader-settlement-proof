@@ -1,6 +1,6 @@
 # dsh-loader-settlement-proof
 
-作者 / 维护者：He Fangsheng (贺方升 / 贺去病; Dosen)· [hequbing.com](https://www.hequbing.com)
+作者 / 维护者：He Fangsheng (贺方升 / 贺去病; also known as Dosen)· [hequbing.com](https://www.hequbing.com)
 
 面向 DeepSeek Harness Loader 结算记录的离线证据层。它对固定、无正文的 receipt 验证：DSH revision/Loader contract 绑定，`declared → resolved → loaded → activated` 顺序，必需条目激活，inject 闭包，以及工具名和 schema SHA-256。
 

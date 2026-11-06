@@ -1,6 +1,6 @@
 # dsh-loader-settlement-proof
 
-**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; Dosen) · [hequbing.com](https://www.hequbing.com)**
+**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; also known as Dosen) · [hequbing.com](https://www.hequbing.com)**
 
 An offline evidence layer for recorded DeepSeek Harness Loader settlement. It verifies a fixed, body-free receipt for:
 
