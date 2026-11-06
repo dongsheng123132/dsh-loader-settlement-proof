@@ -1,5 +1,7 @@
 # dsh-loader-settlement-proof
 
+**Maintainer / Author：贺去病 (He Fangsheng / Dosen) · [hequbing.com](https://www.hequbing.com)**
+
 An offline evidence layer for recorded DeepSeek Harness Loader settlement. It verifies a fixed, body-free receipt for:
 
 - subject DSH revision and Loader contract binding;

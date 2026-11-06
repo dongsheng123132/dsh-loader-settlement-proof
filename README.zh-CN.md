@@ -1,5 +1,7 @@
 # dsh-loader-settlement-proof
 
+作者 / 维护者：贺去病（贺方升 / Dosen）· [hequbing.com](https://www.hequbing.com)
+
 面向 DeepSeek Harness Loader 结算记录的离线证据层。它对固定、无正文的 receipt 验证：DSH revision/Loader contract 绑定，`declared → resolved → loaded → activated` 顺序，必需条目激活，inject 闭包，以及工具名和 schema SHA-256。
 
 它不是第二个 Loader：不导入、不启动、不重载、不切换任何被记录插件。DSH 官方 `app-boot` 负责实时失败闭合；`dsh-reloader` 负责重启，`dsh-builtin-toggles` 负责有限 UI 切换，`dsh-profile-lock-proof` 负责安装闭包，Awesome runtime matrix 负责真实跨平台启动。本插件只把 producer 提供的脱敏结算记录变成可复核、内容寻址的判决。
